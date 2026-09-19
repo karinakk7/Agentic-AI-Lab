@@ -18,7 +18,7 @@ SYSTEM = "Du bist ein prägnanter KI-Erklärer. Antworte auf Deutsch."
 MODELS = [
     "claude-opus-5",
     "gpt-5.6-sol",
-    "mistral-medium-3.5-pro",
+    "gemini-3.8-flash",
 ]
 
 

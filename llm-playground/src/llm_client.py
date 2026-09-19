@@ -20,7 +20,6 @@ _PRICING: dict[str, tuple[float, float]] = {
     "claude-sonnet-5":        (2.00, 10.00),
     "gpt-6-astra":            (10.00, 50.00),
     "gpt-5.6-sol":            (4.00, 20.00),
-    "mistral-medium-3.5-pro": (1.50, 7.50),
     "gemini-3.8-flash":       (0.75, 3.75),
 }
 
@@ -97,23 +96,24 @@ def _openai(prompt: str, model: str, system: str, **kwargs) -> LLMResponse:
     )
 
 
-def _mistral(prompt: str, model: str, system: str, **kwargs) -> LLMResponse:
-    from mistralai import Mistral
-    client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
-    messages = []
-    if system:
-        messages.append({"role": "system", "content": system})
-    messages.append({"role": "user", "content": prompt})
+def _gemini(prompt: str, model: str, system: str, **kwargs) -> LLMResponse:
+    from google import genai
+    from google.genai import types
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     t0 = time.monotonic()
-    resp = client.chat.complete(
+    resp = client.models.generate_content(
         model=model,
-        messages=messages,
-        max_tokens=kwargs.get("max_tokens", 1024),
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            system_instruction=system if system else None,
+            max_output_tokens=kwargs.get("max_tokens", 1024),
+        ),
     )
     latency_ms = int((time.monotonic() - t0) * 1000)
-    in_tok, out_tok = resp.usage.prompt_tokens, resp.usage.completion_tokens
+    in_tok = resp.usage_metadata.prompt_token_count
+    out_tok = resp.usage_metadata.candidates_token_count
     return LLMResponse(
-        text=resp.choices[0].message.content,
+        text=resp.text,
         model=model,
         input_tokens=in_tok,
         output_tokens=out_tok,
@@ -125,10 +125,9 @@ def _mistral(prompt: str, model: str, system: str, **kwargs) -> LLMResponse:
 # ── Router ───────────────────────────────────────────────────────────────────
 
 _ROUTERS: dict[str, callable] = {
-    "claude":   _anthropic,
-    "gpt":      _openai,
-    "mistral":  _mistral,
-    "mixtral":  _mistral,
+    "claude":  _anthropic,
+    "gpt":     _openai,
+    "gemini":  _gemini,
 }
 
 
