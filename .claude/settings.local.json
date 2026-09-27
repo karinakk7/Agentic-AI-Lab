@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\karina.krebs\\\\OneDrive - Accenture\\\\Udemy\\\\Lernplan\" -Depth 2 | Where-Object { $_.PSIsContainer } | Select-Object FullName | Format-Table -AutoSize)",
+      "PowerShell(git -C \"c:\\\\Users\\\\karina.krebs\\\\OneDrive - Accenture\\\\Udemy\\\\Lernplan\" init)",
+      "PowerShell(git -C \"C:\\\\Users\\\\karina.krebs\\\\OneDrive - Accenture\\\\Udemy\\\\Lernplan\" status)",
+      "PowerShell(git -C \"C:\\\\Users\\\\karina.krebs\\\\OneDrive - Accenture\\\\Udemy\\\\Lernplan\" add \"00_UEBERSICHT_6_MONATE.md\" \"MONAT_1_LLM_ENGINEERING.md\" \"MONAT_2_RAG.md\" \"MONAT_3_EVALUATION_UND_AGENTS.md\" \"MONAT_4_AGENTS_UND_ORCHESTRIERUNG.md\" \"MONAT_6_PRODUCTION_UND_CAPSTONE.md\" \"ki-expertin/\" \"llm-playground/\")"
+    ]
+  }
+}

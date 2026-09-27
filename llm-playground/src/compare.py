@@ -16,7 +16,7 @@ PROMPT = "Erkläre in zwei Sätzen, warum zu viele Tokens im Kontext teuer werde
 SYSTEM = "Du bist ein prägnanter KI-Erklärer. Antworte auf Deutsch."
 
 MODELS = [
-    "claude-opus-5",
+    # "claude-opus-5",  # TODO: ANTHROPIC_API_KEY eintragen
     "gpt-5.6-sol",
     "gemini-3.8-flash",
 ]
@@ -59,9 +59,12 @@ def main() -> None:
 
     console.print()
     console.print(table)
-    console.print(
-        f"\n[dim]Calls geloggt in logs/calls.jsonl[/dim]"
-    )
+
+    console.print("\n[bold]Volltexte:[/bold]")
+    for r in results:
+        console.print(f"[cyan]{r.model}[/cyan]: {r.text.strip()}")
+
+    console.print(f"\n[dim]Calls geloggt in logs/calls.jsonl[/dim]")
 
 
 if __name__ == "__main__":

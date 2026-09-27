@@ -221,7 +221,15 @@ Du kannst begründen, wann du `temperature` senkst, was `top_p` tatsächlich bew
 **OpenAI Platform Docs – API Reference, Abschnitt Parameter**
 Link: https://platform.openai.com/docs
 Dauer: 15 Min
-Zu bearbeiten: `temperature`, `top_p`, `max_output_tokens`, `stop`, `seed`, `n`.
+Zu bearbeiten: `temperature`, `top_p`, `max_output_tokens`, `stop`, `n`.
+
+1. OpenAI API Reference – Chat Completions
+OpenAI API Reference – Chat Completions
+Dort findest du u. a. `temperature` und `top_p` direkt bei den Request-Parametern.
+
+2. OpenAI API Reference – Responses API
+OpenAI API Reference – Responses
+Für aktuelle OpenAI-Anwendungen ist die Responses API besonders relevant. Dort findest du beispielsweise 'max_output_tokens'.
 
 Danach: heise KI Update → Discover, 1 Zeile in `radar.md`.
 

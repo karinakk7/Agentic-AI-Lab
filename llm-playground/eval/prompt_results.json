@@ -1,0 +1,143 @@
+{
+  "extract_v1": [
+    {
+      "email_id": 1,
+      "email_label": "Lieferverzögerung",
+      "output": "Hier sind die Kernpunkte der E-Mail auf einen Blick:\n\n* **Betroffene Bestellung",
+      "cost_eur": 0.000234,
+      "latency_ms": 3276,
+      "in_tok": 239,
+      "out_tok": 20
+    },
+    {
+      "email_id": 2,
+      "email_label": "Preiserhöhung mit Staffelung",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    },
+    {
+      "email_id": 3,
+      "email_label": "Artikel abgekündigt – Alternative angeboten",
+      "output": "Hier sind die Kernpunkte der E-Mail zusammengefasst:\n\n* **Produktabkündigung (DS-100 analog / Art.-Nr. 77-4421):**\n  * Wird zum **31.12.** endgültig aus dem Sortiment genommen.\n  * Restbestand beträgt nur noch **ca. 80 Stück** (verfügbar bis Ende Oktober).\n  * **Frist für letzte Bestellungen:** Verbindliche Bestellung bis spätestens **25.10.** erforderlich.\n\n*",
+      "cost_eur": 0.000563,
+      "latency_ms": 6076,
+      "in_tok": 236,
+      "out_tok": 116
+    },
+    {
+      "email_id": 4,
+      "email_label": "Qualitätsmangel – proaktive Meldung",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    },
+    {
+      "email_id": 5,
+      "email_label": "Bestellbestätigung mit Teillieferung",
+      "output": "Hier sind die Kernpunkte der E-Mail zusammengefasst:\n\n**Referenz",
+      "cost_eur": 0.000286,
+      "latency_ms": 5682,
+      "in_tok": 329,
+      "out_tok": 17
+    }
+  ],
+  "extract_v2": [
+    {
+      "email_id": 1,
+      "email_label": "Lieferverzögerung",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    },
+    {
+      "email_id": 2,
+      "email_label": "Preiserhöhung mit Staffelung",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    },
+    {
+      "email_id": 3,
+      "email_label": "Artikel abgekündigt – Alternative angeboten",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    },
+    {
+      "email_id": 4,
+      "email_label": "Qualitätsmangel – proaktive Meldung",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    },
+    {
+      "email_id": 5,
+      "email_label": "Bestellbestätigung mit Teillieferung",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    }
+  ],
+  "extract_v3": [
+    {
+      "email_id": 1,
+      "email_label": "Lieferverzögerung",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    },
+    {
+      "email_id": 2,
+      "email_label": "Preiserhöhung mit Staffelung",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    },
+    {
+      "email_id": 3,
+      "email_label": "Artikel abgekündigt – Alternative angeboten",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    },
+    {
+      "email_id": 4,
+      "email_label": "Qualitätsmangel – proaktive Meldung",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    },
+    {
+      "email_id": 5,
+      "email_label": "Bestellbestätigung mit Teillieferung",
+      "output": "ERROR: Alle 3 Versuche fehlgeschlagen",
+      "cost_eur": 0.0,
+      "latency_ms": 0,
+      "in_tok": 0,
+      "out_tok": 0
+    }
+  ]
+}

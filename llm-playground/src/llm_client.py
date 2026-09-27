@@ -53,11 +53,17 @@ def _anthropic(prompt: str, model: str, system: str, **kwargs) -> LLMResponse:
     import anthropic
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     t0 = time.monotonic()
+    extra = {}
+    if "temperature" in kwargs:
+        extra["temperature"] = min(kwargs["temperature"], 1.0)  # Anthropic max is 1.0
+    if "top_p" in kwargs:
+        extra["top_p"] = kwargs["top_p"]
     msg = client.messages.create(
         model=model,
         max_tokens=kwargs.get("max_tokens", 1024),
         system=system if system else anthropic.NOT_GIVEN,
         messages=[{"role": "user", "content": prompt}],
+        **extra,
     )
     latency_ms = int((time.monotonic() - t0) * 1000)
     in_tok, out_tok = msg.usage.input_tokens, msg.usage.output_tokens
@@ -79,10 +85,16 @@ def _openai(prompt: str, model: str, system: str, **kwargs) -> LLMResponse:
         messages.append({"role": "system", "content": system})
     messages.append({"role": "user", "content": prompt})
     t0 = time.monotonic()
+    extra = {}
+    if "temperature" in kwargs:
+        extra["temperature"] = kwargs["temperature"]
+    if "top_p" in kwargs:
+        extra["top_p"] = kwargs["top_p"]
     resp = client.chat.completions.create(
         model=model,
         messages=messages,
         max_tokens=kwargs.get("max_tokens", 1024),
+        **extra,
     )
     latency_ms = int((time.monotonic() - t0) * 1000)
     in_tok, out_tok = resp.usage.prompt_tokens, resp.usage.completion_tokens
@@ -99,19 +111,29 @@ def _openai(prompt: str, model: str, system: str, **kwargs) -> LLMResponse:
 def _gemini(prompt: str, model: str, system: str, **kwargs) -> LLMResponse:
     from google import genai
     from google.genai import types
-    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if not api_key:
+        raise KeyError("GEMINI_API_KEY oder GOOGLE_API_KEY fehlt in .env")
+    client = genai.Client(api_key=api_key)
     t0 = time.monotonic()
+    cfg_extra: dict = {}
+    if "temperature" in kwargs:
+        cfg_extra["temperature"] = kwargs["temperature"]
+    if "top_p" in kwargs:
+        cfg_extra["top_p"] = kwargs["top_p"]
     resp = client.models.generate_content(
         model=model,
         contents=prompt,
         config=types.GenerateContentConfig(
             system_instruction=system if system else None,
             max_output_tokens=kwargs.get("max_tokens", 1024),
+            automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
+            **cfg_extra,
         ),
     )
     latency_ms = int((time.monotonic() - t0) * 1000)
-    in_tok = resp.usage_metadata.prompt_token_count
-    out_tok = resp.usage_metadata.candidates_token_count
+    in_tok = resp.usage_metadata.prompt_token_count or 0
+    out_tok = resp.usage_metadata.candidates_token_count or 0
     return LLMResponse(
         text=resp.text,
         model=model,

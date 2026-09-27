@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "label": "Lieferverzögerung",
+    "body": "Betreff: Verzögerung Ihrer Bestellung B-2024-0441\n\nSehr geehrte Damen und Herren,\n\nwir bedauern, Ihnen mitteilen zu müssen, dass sich die Lieferung Ihrer Bestellung B-2024-0441 (Hydraulikdichtungen Typ HX-200, 500 Stück) verzögern wird. Aufgrund eines Engpasses bei unserem Rohstofflieferanten können wir den ursprünglich vereinbarten Termin am 15.10. nicht einhalten.\n\nWir gehen aktuell davon aus, dass die Ware am 29.10. versandfertig sein wird und Sie spätestens am 31.10. bei Ihnen eintrifft.\n\nFür eventuelle Produktionsausfälle auf Ihrer Seite bitten wir um Entschuldigung. Sollten Sie einen Teilersatz oder eine Expresslieferung einer Teilmenge benötigen, stehen wir für ein Gespräch zur Verfügung.\n\nMit freundlichen Grüßen\nThomas Brandt\nVertrieb Innendienst\nKunststoffwerk Brandt GmbH & Co. KG"
+  },
+  {
+    "id": 2,
+    "label": "Preiserhöhung mit Staffelung",
+    "body": "Betreff: Preisanpassung zum 01.01. – Ihre Rahmenverträge RV-0017 und RV-0023\n\nSehr geehrte Frau Schneider,\n\nwie bereits in unserem letzten Gespräch angedeutet, sehen wir uns leider gezwungen, unsere Preise im Rahmen der allgemeinen Kostensteigerungen anzupassen.\n\nKonkret bedeutet das:\n- Aluminiumprofile (RV-0017): +9 % ab 01.01.\n- Verbindungselemente Edelstahl (RV-0023): +4 % ab 01.01.; Preise für RV-0023 bleiben bis 31.03. auf heutigem Niveau, wenn Sie bis 15.12. eine verbindliche Jahresmengenplanung übermitteln.\n\nWir bitten um Ihre Rückmeldung bis 30.11., damit wir die neuen Konditionen rechtzeitig in unserem System hinterlegen können.\n\nGerne stehen wir für ein kurzes Abstimmungsgespräch zur Verfügung.\n\nMit freundlichen Grüßen\nSarah Müller\nKey Account Management\nAlutec Verbindungstechnik AG"
+  },
+  {
+    "id": 3,
+    "label": "Artikel abgekündigt – Alternative angeboten",
+    "body": "Betreff: Produktabkündigung Artikel 77-4421 / Nachfolgemodell verfügbar\n\nGuten Tag,\n\nwir möchten Sie darüber informieren, dass unser Artikel 77-4421 (Drucksensor DS-100 analog) zum 31.12. aus unserem Sortiment genommen wird. Lagerbestände sind nur noch bis Ende Oktober verfügbar (ca. 80 Stück).\n\nAls Nachfolger empfehlen wir den DS-200 digital, der funktional kompatibel ist und zusätzlich eine IO-Link-Schnittstelle bietet. Der Preis liegt 12 % über dem des DS-100. Technische Datenblätter und Mustergeräte können wir auf Anfrage innerhalb von 5 Werktagen bereitstellen.\n\nSollten Sie noch Restmengen des DS-100 benötigen, bitten wir um verbindliche Bestellung bis 25.10., da wir danach keine Lieferzusage mehr geben können.\n\nMit freundlichen Grüßen\nKlaus Hofmann\nProduktmanagement\nSensorik Nord GmbH"
+  },
+  {
+    "id": 4,
+    "label": "Qualitätsmangel – proaktive Meldung",
+    "body": "Betreff: Qualitätsinformation zu Lieferung LI-2024-0889 – bitte lesen\n\nSehr geehrte Damen und Herren,\n\nbei einer stichprobenartigen Endkontrolle unserer eigenen Auslieferungschargen haben wir festgestellt, dass eine Charge Schrauben M8×25 DIN 933 (Charge C-0441, geliefert am 02.10. mit Ihrer Bestellung B-2024-0388) möglicherweise nicht vollständig der geforderten Festigkeitsklasse 8.8 entspricht. Betroffen sind voraussichtlich ca. 15–20 % der gelieferten Menge (Liefermenge: 2.000 Stück).\n\nWir empfehlen dringend, die Charge vorerst aus Ihrer Fertigung zu nehmen und keine sicherheitsrelevanten Verbindungen damit herzustellen, bis unsere Nachprüfung abgeschlossen ist. Wir erwarten die Laborergebnisse bis 14.10. und werden Sie umgehend informieren.\n\nEin kostenloser Austausch der betroffenen Teile ist selbstverständlich. Wir bitten um kurze Rückmeldung, ob Sie die beschriebene Menge noch im Haus haben.\n\nMit freundlichen Grüßen\nMarkus Weber\nQualitätsmanagement\nFasteners Central GmbH"
+  },
+  {
+    "id": 5,
+    "label": "Bestellbestätigung mit Teillieferung",
+    "body": "Betreff: Auftragsbestätigung AB-2024-7731 zu Ihrer Bestellung B-2024-0502\n\nSehr geehrte Damen und Herren,\n\nvielen Dank für Ihren Auftrag. Wir bestätigen die Annahme Ihrer Bestellung B-2024-0502 und möchten Sie über die geplante Lieferstruktur informieren:\n\nPos. 1 – Steuerungsmodule CM-40 (50 Stück): vollständig lieferbar, Versand 20.10., voraussichtl. Ankunft 22.10.\nPos. 2 – Anschlusskabel Typ K-12 (200 m): 120 m lieferbar ab 20.10.; verbleibende 80 m folgen in KW 44 (voraussichtl. 01.11.).\nPos. 3 – Montageschienen MS-50 (30 Stück): Lieferung erst ab 05.11. möglich, da Zukaufteil mit verlängerter Lieferzeit.\n\nBitte bestätigen Sie, ob diese Liefereinteilung für Sie akzeptabel ist. Falls Sie die Gesamtlieferung bevorzugen, können wir alternativ alles gemeinsam Ende KW 44 versenden.\n\nWir bitten um Ihre Rückmeldung bis 15.10.\n\nMit freundlichen Grüßen\nAnna Kruse\nAuftragssachbearbeiterin\nControltech Systems GmbH"
+  }
+]
